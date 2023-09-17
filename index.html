@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://github.com/RGBManip">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -91,35 +91,46 @@
           <h1 class="title is-1 publication-title">RGBManip: Monocular Image-based Robotic Manipulation through Active Object Pose Estimation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Boshi An*</a>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Yiran Geng*</a>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Kai Chen*</a>,
+              <a href="https://boshi-an.github.io/">Boshi An*<sup>1</sup></a>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Xiaoqi Li</a>,
+              <a href="https://gengyiran.github.io/">Yiran Geng*<sup>1</sup></a>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Qi Dou</a>,
+              <a href="https://ck-kai.github.io/">Kai Chen*<sup>3</sup></a>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Hao Dong</a>,
+              <a href="http://sofienbouaziz.com">Xiaoqi Li<sup>1,2</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cse.cuhk.edu.hk/~qdou/">Qi Dou<sup>3</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://zsdonghao.github.io/">Hao Dong<sup>1</sup></a>,
             </span>
           </div>
 
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
-
-        
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of CS, Peking University and National Key Laboratory for Multimedia Information Processing</span>
+            <span class="author-block"><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI)</span>
+            <span class="author-block"><sup>3</sup>Department of Computer Science and Engineering, Chinese University of Hong Kong</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png" alt="Teaser" width="100%">
+      <h2 class="subtitle has-text-centered">
+        An eye-on-hand camera captures multiple RGB images to estimate
+        the object pose in the manipulation process.      </h2>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
@@ -129,43 +140,40 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Robotic manipulation requires accurate perception of the environment, which poses a significant challenge
-due to its inherent complexity and constantly changing nature.
-In this context, RGB image and point-cloud observations
-are two commonly used modalities in visual-based robotic
-manipulation, but each of these modalities have their own
-limitations. Commercial point-cloud observations often suffer
-from issues like sparse sampling and noisy output due to
-the limits of the emission-reception imaging principle. On the
-other hand, RGB images, while rich in texture information,
-lack essential depth and 3D information crucial for robotic
-manipulation. To mitigate these challenges, we propose an
-image-only robotic manipulation framework that leverages
-an eye-on-hand monocular camera installed on the robot’s
-parallel gripper. By moving with the robot gripper, this camera
-gains the ability to actively perceive object from multiple
-perspectives during the manipulation process. This enables
-the estimation of 6D object poses, which can be utilized for
-manipulation. While, obtaining images from more and diverse
-viewpoints typically improves pose estimation, it also increases
-the manipulation time. To address this trade-off, we employ a
-reinforcement learning policy to synchronize the manipulation
-strategy with active perception, achieving a balance between 6D
-pose accuracy and manipulation efficiency. Our experimental
-results in both simulated and real-world environments showcase
-the state-of-the-art effectiveness of our approach. We believe
-that our method will inspire further research on real-world-oriented robotic manipulation.
+          Robotic manipulation requires accurate perception of the 
+          environment, which poses a significant challenge
+          due to its inherent complexity and constantly changing nature.
+          In this context, RGB image and point-cloud observations
+          are two commonly used modalities in visual-based robotic
+          manipulation, but each of these modalities have their own
+          limitations. Commercial point-cloud observations often suffer
+          from issues like sparse sampling and noisy output due to
+          the limits of the emission-reception imaging principle. On the
+          other hand, RGB images, while rich in texture information,
+          lack essential depth and 3D information crucial for robotic
+          manipulation. To mitigate these challenges, we propose an
+          image-only robotic manipulation framework that leverages
+          an eye-on-hand monocular camera installed on the robot’s
+          parallel gripper. By moving with the robot gripper, this camera
+          gains the ability to actively perceive object from multiple
+          perspectives during the manipulation process. This enables
+          the estimation of 6D object poses, which can be utilized for
+          manipulation. While, obtaining images from more and diverse
+          viewpoints typically improves pose estimation, it also increases
+          the manipulation time. To address this trade-off, we employ a
+          reinforcement learning policy to synchronize the manipulation
+          strategy with active perception, achieving a balance between 6D
+          pose accuracy and manipulation efficiency. Our experimental
+          results in both simulated and real-world environments showcase
+          the state-of-the-art effectiveness of our approach. We believe
+          that our method will inspire further research on real-world-oriented 
+          robotic manipulation.
           
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
-
-
-
-<!-- 
 
 <footer class="footer">
   <div class="container">
@@ -187,17 +195,14 @@ that our method will inspire further research on real-world-oriented robotic man
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
 </body>
 </html>
